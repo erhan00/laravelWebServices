@@ -64,11 +64,8 @@ Route::get('/ilceler/{id}',[ilce_controller::class, 'show']);
 Route::post('/gonder-ileti',[GonderIleti::class,'MsjGonder']);
 
 
-
-Route::post('/firmalar-route', [firmalar::class, 'store']);
-
-Route::get('firmalar/{firmaid}/esler',[firmalar::class,'showEsler']);
+Route::get('firmalar/{id}/esler',[firmalar::class,'showEsler']);
 
 
 
-Route::get('projeler/{projeid}/işler',[project::class,'getIssue']);
+Route::get('projeler/{id}/isler',[project::class,'getIssue']);

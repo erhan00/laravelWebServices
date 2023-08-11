@@ -36,9 +36,9 @@ class sehir_controller extends Controller
          // Belirli bir şehri bul
          $sehir = SehirModel::with('ilceler')->find($id);
          if ($sehir) {
-          return response()->json(['Şehir' => $sehir],200);
+          return response()->json(['sehir' => $sehir],200);
          }
-          return response()->json(['success'=>false,'message' => 'Şehir bulunamadı'], 404);
+          return response()->json(['success'=>false,'message' => 'sehir_bulunamadı'], 404);
     }
     
 }

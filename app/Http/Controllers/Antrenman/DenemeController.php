@@ -132,14 +132,14 @@ class DenemeController extends Controller
            $DbKayit->GENDER = $GENDER;
 
         if ($DbKayit->save()) {
-          return response()->json(['success' => true,'Message' => 'Kayıt Başarıyla Oluşturuldu.'],200);
+          return response()->json(['success' => true,'Message' => 'kayıt_basarıyla_oluşturuldu.'],200);
          } 
        }
         catch (ModelNotFoundException $e) {
-          return response()->json(['success' => false, 'Message' => 'Kaynak Bulunamadı.'], 404);
+          return response()->json(['success' => false, 'Message' => 'kaynak_bulunamadı.'], 404);
         }
          catch (\Exception $e) {
-          return response()->json(['success' => false, 'Message' => 'Sistemmsel Bir Hata Oluştu.'], 500);
+          return response()->json(['success' => false, 'Message' => 'sistemmsel_bir_hata_olustu.'], 500);
         }
       }
   
@@ -154,11 +154,11 @@ class DenemeController extends Controller
        }  
       catch (ModelNotFoundException $e) 
         {
-         return response()->json(['success' => false, 'Message' => 'Kullanıcı Bulunamadı.'], 404);
+         return response()->json(['success' => false, 'Message' => 'kullanıcı_bulunamadı.'], 404);
         } 
       catch (\Exception $e) 
         {
-         return response()->json(['success' => false, 'Message' => 'Sistemsel Bir Hata Oluştu.'], 500);
+         return response()->json(['success' => false, 'Message' => 'sistemsel_bir_hata_olustu.'], 500);
         }
     }
 
@@ -200,19 +200,19 @@ class DenemeController extends Controller
             // dd($queries); // Sorguları görmek için kullanabilir
             //return response()->json(['success' => false, 'Message' => $queries ], 500);
             //}
-        return response()->json(['success' => true, 'Message' => 'Kullanıcı Bilgileri Güncellendi.'], 200);
+        return response()->json(['success' => true, 'Message' => 'kullanıcı_bilgileri_güncellendi.'], 200);
       }
       catch (ModelNotFoundException $e) {
-        return response()->json(['success' => false, 'Message' => 'Kullanıcı Bulunamadı.'], 404);
+        return response()->json(['success' => false, 'Message' => 'kullanıcı_bulunamadı.'], 404);
      }
       catch (\Exception $e) {
-        return response()->json(['success' => false, 'Message' =>'Sistem Hatası.'], 500);
+        return response()->json(['success' => false, 'Message' =>'sistem_hatası.'], 500);
      }
      catch(ApiException $e){
       // getCode:Exception sınıfı veya ondan türetilen diğer istisna sınıfları, $code adında bir özellik (property) içerirler.
       // Bu özellik, istisna nesnesinin hatanın türüne özgü bir sayısal kod içerebilir.
       //getMeesage:hata mesajı
-       return response()->json(['success' => false, 'Message' =>'Sistem Hatası'],500);// $e->getMsg()],$e->getResponseCode());
+       return response()->json(['success' => false, 'Message' =>'sistem_hatası'],500);// $e->getMsg()],$e->getResponseCode());
      }
     }
 
@@ -222,13 +222,13 @@ class DenemeController extends Controller
        try
       {
         Deneme::where('ID', $id)->delete();
-        return response()->json(['success' => true,'Message' => 'Kullanıcıyı Veritabanından Silme İşlemi Gerçekleşti.'],200);
+        return response()->json(['success' => true,'Message' => 'kullanıcıyı_veritabanından_silme_islemi_gerçekleşti.'],200);
       }
       catch (ModelNotFoundException $e) {
-        return response()->json(['success' => false, 'Message' => 'Kayıt Bulunamadı.'], 404);
+        return response()->json(['success' => false, 'Message' => 'kayıt_bulunamadı.'], 404);
       }
        catch (\Exception $e){
-        return response()->json(['success' => false, 'Message' => 'Kayıt Silinirken Sistemsel bir Hata Oluştu.'], 500);
+        return response()->json(['success' => false, 'Message' => 'kayıt_silinirken_sistemsel_bir_hata_oluştu.'], 500);
      }
   }
 }

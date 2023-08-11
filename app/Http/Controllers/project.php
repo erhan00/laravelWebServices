@@ -21,7 +21,7 @@ class project extends Controller
 
         
         if (!$proje) {
-            return response()->json(['error' => 'Proje Bulunamadı'], 404);
+            return response()->json(['error' => 'proje_bulunamadı'], 404);
         }
 
         $issues = $proje->issuesGet;
@@ -34,7 +34,7 @@ class project extends Controller
         return response()->json(['Project' => $proje]);
      }
      catch(Exception $e){
-       return response()->json(['success' => false, 'Message' => 'Bir hata oluştu'. $e->getMessage()], 500);
+       return response()->json(['success' => false, 'Message' => 'bir_hata_oluştu'. $e->getMessage()], 500);
      }
     } 
     
