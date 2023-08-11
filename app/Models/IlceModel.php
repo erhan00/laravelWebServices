@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class IlceModel extends Model
 {
-  protected $table = 'county'; // Örnek sütunlar, ihtiyaca göre düzenleyebilirsiniz.
+  protected $table = 'county'; // 
 
   public function il()
   {

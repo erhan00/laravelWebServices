@@ -18,7 +18,7 @@ class firmalar extends Controller
       $firma = firma::with(['esler'])->find($firmaId);
 
       if (!$firma) {
-          return response()->json(['error' => 'firma_bulunamadi'], 404);
+          return response()->json(['Error' => 'firma_bulunamadi'], 404);
       }
 
       return response()->json(['iliskili_data : ' => $firma]);

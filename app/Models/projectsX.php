@@ -12,7 +12,7 @@ class projectsX extends Model
     protected $table = 'projects';
     protected $primaryKey = 'ID';
 
-    public function issuesGet(){
+    public function IssuesGet(){
 
         return $this->hasManyThrough(issuesX::class, usersX::class, 'PROJECT_ID', 'ID', 'ID');
 

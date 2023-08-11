@@ -9,7 +9,6 @@ use App\Http\Controllers\ilce_controller;
 use App\Http\Controllers\sehir_controller;
 use App\Http\Controllers\MailGonder;
 use App\Http\Controllers\project;
-use App\Models\project01;
 
 /*
 |--------------------------------------------------------------------------

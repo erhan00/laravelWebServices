@@ -17,11 +17,11 @@ class project extends Controller
       try
     {
 //        $proje = projectsX::find($ulkeId);
-        $proje = projectsX::with('issuesGet')->find($projeId);
+        $proje = projectsX::with('IssuesGet')->find($projeId);
 
         
         if (!$proje) {
-            return response()->json(['error' => 'proje_bulunamadi'], 404);
+            return response()->json(['Error' => 'proje_tablosu_bulunamadi'], 404);
         }
 
         $issues = $proje->issuesGet;
