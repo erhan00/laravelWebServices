@@ -18,13 +18,13 @@ class firmalar extends Controller
       $firma = firma::with(['esler'])->find($firmaId);
 
       if (!$firma) {
-          return response()->json(['error' => 'firma_bulunamadı'], 404);
+          return response()->json(['error' => 'firma_bulunamadi'], 404);
       }
 
-      return response()->json(['Firma_bilgileri_personel_tablosu_ile_iliskili_esler_tablosu_verileri : ' => $firma]);
+      return response()->json(['iliskili_data : ' => $firma]);
       }
       catch(Exception $e){
-        return response()->json(['success' => false, 'Message' => 'bir_hata_olustu'. $e->getMessage()], 500); 
+        return response()->json(['Success' => false, 'Message' => 'bir_hata_olustu'. $e->getMessage()], 500); 
       }
     }
 

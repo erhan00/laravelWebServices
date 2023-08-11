@@ -38,7 +38,7 @@ class sehir_controller extends Controller
          if ($sehir) {
           return response()->json(['sehir' => $sehir],200);
          }
-          return response()->json(['success'=>false,'message' => 'sehir_bulunamadı'], 404);
+          return response()->json(['Success'=>false,'Message' => 'sehir_bulunamadi'], 404);
     }
     
 }

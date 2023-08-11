@@ -66,10 +66,10 @@ class GonderIleti extends Controller
             $mail->AltBody = 'PRODER yazılım';
 
             $mail->send();
-            return "E-posta başarıyla gönderildi!";
+            return "e-posta_basariyla_gonderildi!";
        }
       catch(Exception $e){
-        return response()->json(['success' => false, 'Message' => $e->getMessage()], 500);
+        return response()->json(['Success' => false, 'Message' => $e->getMessage()], 500);
        }
     }
 }

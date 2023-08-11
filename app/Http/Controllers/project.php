@@ -21,7 +21,7 @@ class project extends Controller
 
         
         if (!$proje) {
-            return response()->json(['error' => 'proje_bulunamadı'], 404);
+            return response()->json(['error' => 'proje_bulunamadi'], 404);
         }
 
         $issues = $proje->issuesGet;
@@ -31,10 +31,10 @@ class project extends Controller
             unset($issue['laravel_through_key']);
         }
 
-        return response()->json(['Project' => $proje]);
+        return response()->json(['PROJECT' => $proje]);
      }
      catch(Exception $e){
-       return response()->json(['success' => false, 'Message' => 'bir_hata_oluştu'. $e->getMessage()], 500);
+       return response()->json(['Success' => false, 'Message' => 'bir_hata_olustu'. $e->getMessage()], 500);
      }
     } 
     
