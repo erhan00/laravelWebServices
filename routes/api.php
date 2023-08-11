@@ -63,7 +63,7 @@ Route::get('/ilceler/{id}',[ilce_controller::class, 'show']);
 Route::post('/gonder-ileti',[GonderIleti::class,'MsjGonder']);
 
 
-Route::get('firmalar/{id}/esler',[firmalar::class,'showEsler']);
+Route::get('firmalar/{id}',[firmalar::class,'showEsler']);
 
 
 

@@ -15,13 +15,15 @@ class firmalar extends Controller
   public function showEsler($firmaId)
   {
     try{
-      $firma = firma::with(['esler'])->find($firmaId);
+      $firma = firma::with(['Esler'])->find($firmaId);
 
       if (!$firma) {
           return response()->json(['Error' => 'firma_bulunamadi'], 404);
       }
 
-      return response()->json(['iliskili_data : ' => $firma]);
+      unset($firma->esler['laravel_through_key']);
+
+      return response()->json(['ILISKILI_TABLO : ' => $firma]);
       }
       catch(Exception $e){
         return response()->json(['Success' => false, 'Message' => 'bir_hata_olustu'. $e->getMessage()], 500); 
