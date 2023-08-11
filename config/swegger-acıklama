@@ -1,0 +1,4 @@
+- Yapılandırma Dosyasını Yeniden Oluşturun: config klasöründe swagger.php dosyasını silip,
+ daha sonra php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider" komutunu çalıştırarak
+  yapılandırma dosyasını yeniden oluşturabilirsiniz. Bu, yapılandırmaların güncellenmesine ve Swagger UI'nın düzgün
+   çalışmasına yardımcı olabilir.

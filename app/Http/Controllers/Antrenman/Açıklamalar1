@@ -1,0 +1,14 @@
+---OrderBy : Yöntem orderBy, sorgunun sonuçlarını belirli bir sütuna göre sıralamanıza olanak tanır. Yöntem tarafından kabul edilen
+ ilk bağımsız değişken, orderBysıralamak istediğiniz sütun olmalıdır, ikinci bağımsız değişken ise sıralamanın yönünü belirler
+  ve şunlardan biri ascolabilir desc:
+
+---latest & oldest : latestve yöntemleri oldest, sonuçları tarihe göre kolayca sıralamanızı sağlar. Varsayılan olarak, sonuç tablonun sütununa göre sıralanacaktır created_at. Veya sıralamak istediğiniz sütun adını iletebilirsiniz:
+
+---inRandomOrder : Yöntem inRandomOrder, sorgu sonuçlarını rastgele sıralamak için kullanılabilir. Örneğin, rastgele bir kullanıcı getirmek için bu yöntemi kullanabilirsiniz:
+
+--Gruplama
+---groupBy & having : 
+
+--Limit &Offset
+---skip& Yöntemler take_ :Sorgudan döndürülen sonuç sayısını sınırlamak veya sorguda belirli sayıda sonucu atlamak için skipve yöntemlerini kullanabilirsiniz :take,
+skip için:offset,limit için:take

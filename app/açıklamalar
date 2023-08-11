@@ -1,0 +1,5 @@
+/*
+ ORTAM DEĞİŞKENLERI: işletim sistemi seviyesinde konfigüre edilebilen ve bilgisayar işlemleri tarafından erişilebilen değişkenlerdir.
+  Çoğu kez belli programların ve dosyaların konumlarını (ing. path) ve birden fazla işlem tarafından kullanılan ortak 
+   ayarları tutmak için kullanılırlar.
+*/
